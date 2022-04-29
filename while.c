@@ -1,19 +1,21 @@
 #include <stdio.h>
 
-void main(void)
-{
-int NUM;
-long CUA, SUC = 0;
-printf(“\nIngrese un número entero -0 para terminar-:\t”);
-scanf(“%d”, &NUM);
-while (NUM)
+int main(void) {
+  int repeticiones = 0;
+  int cont = 0;
+  printf("\ningresa la cantidad de repeticiones: ");
+    scanf("%d", &repeticiones);
+  
+  while(cont <= repeticiones)
+    {
+      if(cont <= 0)
+      {
 
-{
-CUA = pow (NUM, 2);
-printf(“%d al cubo es %ld”, NUM, CUA);
-SUC = SUC + CUA;
-printf(“\nIngrese un número entero -0 para terminar-:\t”);
-scanf(“%d”, &NUM);
-}
-printf(“\nLa suma de los cuadrados es %ld”, SUC);
+        cont = 1;
+      }
+      printf("\nEl valor de cont: %d" ,cont);
+      cont++;
+    
+      }
+  return 0;
 }
